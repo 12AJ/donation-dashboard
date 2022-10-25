@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+nav{
+    height: 80px;
+    background-color: orange;
+    width: 100%;
+}
+.totalAmountDiv{
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+    border: 6px double #2ff32f;
+    padding: 10px;
+}
+.totalAmount{
+    margin: 10px;
+    font-size: 50px;
+}
