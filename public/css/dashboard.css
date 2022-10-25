@@ -5,18 +5,66 @@
 }
 
 nav{
+    display: flex;
+    flex-direction: row;
     height: 80px;
     background-color: orange;
-    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+nav>p{
+    font-size: 40px;
+    color: white;
+    border-bottom: 6px double white;
+}
+nav>img{
+    width: 80px;
 }
 .totalAmountDiv{
     text-align: center;
-    margin: 20px auto;
-    width: 300px;
+    margin: 20px auto 50px auto;
     border: 6px double #2ff32f;
-    padding: 10px;
+    padding: 10px 30px;
+    box-shadow: 0px 11px 17px -7px rgba(0,0,0,0.75);
+    display: table;
 }
 .totalAmount{
     margin: 10px;
     font-size: 50px;
+    color: orange;
+}
+.detailsDiv{
+    border: 2px solid orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    margin: 10px 20px;
+    text-align: center;
+    box-shadow: 0px 7px 12px -7px rgba(0,0,0,0.75);
+
+}
+.amount{
+    font-size: 20px;
+    color: #2ff32f;
+}
+.name{
+    font-size: 20px;
+    color: #2ff32f;
+}
+
+@media (max-width:700px) {
+    .detailsDiv{
+        flex-direction: column;
+    }
+    nav{
+        padding: 5px;
+    }
+    nav>p{
+        font-size: xx-large;
+    }
+    .totalAmount{
+    word-break: break-all;
+    }
 }

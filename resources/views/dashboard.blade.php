@@ -9,15 +9,29 @@
 </head>
 <body>
     <nav>
-
+        <img src="imgs/logo.png" alt="logo">
+        <p>DashBoard</p>
+        <img src="imgs/logo.png" alt="logo">
     </nav>
-    
+
+    {{-- this is the dummy of backend for now --}}
+    <?php
+    $donorDetails= array(101,201,301,401,501);
+   $totalAmount= array_sum($donorDetails);
+    ?>
+{{-- --------------------------------------------- --}}
     <main>
         <div class="totalAmountDiv">
             <h2 class="totalAmountHeading">Total Amount Recived</h2>
-            <p class="totalAmount">123456 ₹</p>
+            <p class="totalAmount">{{$totalAmount}} ₹</p>
         </div>
        
+
+{{-- --------this displays the donor list dynamically --}}
+@foreach ($donorDetails as $item)
+<x-donation-entries :num=$item/>
+@endforeach
+        {{----------------------------------------------  --}}
 
     </main>
 </body>
