@@ -1,10 +1,10 @@
 <div class="detailsDiv">
 
-    <p class="name">Raj Ingale</p>
+    <p class="name">{{$num['name']}}</p>
 <div>
-    <p>karve nagar,pune,maharashtra</p>
-    <p>raj@rajjjjjjjjj.com</p>
-    <p>1111111111</p>
+    <p>{{$num['address']}}</p>
+    <p>{{$num['email']}}</p>
+    <p>{{$num['mobile']}}</p>
 </div>
-    <p class="amount">+ {{$num}} ₹</p>
+    <p class="amount">+ {{$num['amount']}} ₹</p>
 </div>

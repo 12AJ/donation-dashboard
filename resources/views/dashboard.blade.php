@@ -14,15 +14,16 @@
         <img src="imgs/logo.png" alt="logo">
     </nav>
 
-    {{-- this is the dummy of backend for now --}}
     <?php
-    $donorDetails= array(101,201,301,401,501);
-   $totalAmount= array_sum($donorDetails);
+   $totalAmount;
+// to calculate the total amount-----------------------
+   foreach ($details1 as $item) {
+    global $totalAmount;
+    $totalAmount = $item['amount']+$totalAmount;
+   };
     ?>
-@foreach ($details1 as $item)
-{{var_dump($item)}}
-@endforeach
 {{-- --------------------------------------------- --}}
+
     <main>
         <div class="totalAmountDiv">
             <h2 class="totalAmountHeading">Total Amount Recived</h2>
@@ -31,7 +32,7 @@
        
 
 {{-- --------this displays the donor list dynamically --}}
-@foreach ($donorDetails as $item)
+@foreach ($details1 as $item)
 <x-donation-entries :num=$item/>
 @endforeach
         {{----------------------------------------------  --}}
