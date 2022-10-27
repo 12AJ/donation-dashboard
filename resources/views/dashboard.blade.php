@@ -19,6 +19,9 @@
     $donorDetails= array(101,201,301,401,501);
    $totalAmount= array_sum($donorDetails);
     ?>
+@foreach ($details1 as $item)
+{{var_dump($item)}}
+@endforeach
 {{-- --------------------------------------------- --}}
     <main>
         <div class="totalAmountDiv">
