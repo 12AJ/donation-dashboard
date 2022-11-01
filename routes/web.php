@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FirebaseController;
+use App\Http\Controllers\LoginController;
+use views\login;
 
+use App\Http\Controllers\FirebaseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +20,21 @@ use App\Http\Controllers\FirebaseController;
 //     return view('dashboard');
 // });
 
-Route::get('/dashboard', [FirebaseController::class, 'index']);
+// Route::get('/dashboard', [FirebaseController::class, 'index']);
+// Route::get('/loginsuccess', [FirebaseController::class, 'adminlogin']);
 
+// Route::get( '/', [LoginController::class , 'index']);
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+
+Route::get( '/', [FirebaseController::class , 'index1']);
+Route::post( '/', [FirebaseController::class , 'checklogin']);
+// Route::get( '/login',function () {
+//     return redirect('/loginsuccess');
+// });
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
 
