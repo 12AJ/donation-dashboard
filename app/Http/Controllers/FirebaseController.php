@@ -18,7 +18,7 @@ class FirebaseController extends Controller
     public function index()
     {
         $firebase = (new Factory)
-            ->withServiceAccount(__DIR__.'/donationdata-firebase-adminsdk-a0irl-70eff20ff9.json')
+            ->withServiceAccount(__DIR__.'/donationdata-firebase-adminsdk-a0irl-e3ce4e4306.json')
             ->withDatabaseUri('https://donationdata-default-rtdb.firebaseio.com/donorData');
  
         $database = $firebase->createDatabase();
@@ -37,7 +37,6 @@ class FirebaseController extends Controller
     function checklogin(Request $request){
  
         $this->validate($request , [
-
            'email'  => 'required|email',
            'password' => 'required|alphaNum|min:7'
         ]);
@@ -51,7 +50,7 @@ class FirebaseController extends Controller
 
 //    ----------Connect with database-----------------
     $firebase = (new Factory)
-    ->withServiceAccount(__DIR__.'/donationdata-firebase-adminsdk-a0irl-70eff20ff9.json')
+    ->withServiceAccount(__DIR__.'/donationdata-firebase-adminsdk-a0irl-e3ce4e4306.json')
     ->withDatabaseUri('https://donationdata-default-rtdb.firebaseio.com/login');
 
 
